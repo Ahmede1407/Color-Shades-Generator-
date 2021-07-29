@@ -6,7 +6,7 @@ import Values from "values.js";
 const App = () => {
   const [color, setColor] = useState("");
   const [error, setError] = useState(false);
-  const [list, setList] = useState([]);
+  const [list, setList] = useState(new Values("#1a6aa2").all(10));
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -28,7 +28,7 @@ const App = () => {
             type="text"
             value={color}
             onChange={(e) => setColor(e.target.value)}
-            placeholder="#f15025"
+            placeholder="#1a6aa2"
             className={`${error ? "error" : null}`}
           />
           <button type="submit" className="btn">
